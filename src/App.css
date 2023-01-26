@@ -1,0 +1,16 @@
+.card {
+  background-color: #a9a9a9;
+  box-shadow: 0 0 8px 2px rgb(0 0 0 / 20%);
+  border-radius: 5px;
+  width: 600px;
+  padding: 10px;
+  margin: auto;
+}
+
+.resume-template {
+  box-shadow: 0 0 8px 2px rgb(0 0 0 / 20%);
+  border-radius: 5px;
+  width: 600px;
+  padding: 10px;
+  margin: auto;
+}
