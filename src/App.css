@@ -1,16 +1,34 @@
+*,
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Marcellus;
+}
+
 .card {
   background-color: #a9a9a9;
   box-shadow: 0 0 8px 2px rgb(0 0 0 / 20%);
   border-radius: 5px;
-  width: 600px;
+  width: 500px;
   padding: 10px;
-  margin: auto;
+  margin: 30px auto;
 }
 
 .resume-template {
   box-shadow: 0 0 8px 2px rgb(0 0 0 / 20%);
   border-radius: 5px;
-  width: 600px;
-  padding: 10px;
-  margin: auto;
+  padding: 0 80px;
+  width: 800px;
+  margin: 30px auto;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

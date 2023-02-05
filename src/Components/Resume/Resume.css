@@ -1,4 +1,28 @@
-.template-header {
-  background-color: blue;
-  height: 300px;
+.header {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin-top: 20px;
+  grid-template-areas: 
+    "header image"
+    "title image"
+}
+
+.header--name {  
+  grid-area: header;
+  align-self: center;
+  margin-right: auto;
+}
+
+.header--image {
+  grid-area: image;
+  width: 70px;
+  border-radius: 50px;
+}
+
+.aside {
+  margin-right: auto;
+}
+
+.personal {
+  width: 180px;
 }
