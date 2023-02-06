@@ -13,6 +13,11 @@ function App() {
     email: "",
     address: "",
     phoneNumber: "",
+    position: "",
+    company: "",
+    city: "",
+    startDate: "",
+    endDate: "",
   });
 
   function handleChange(e) {
@@ -37,14 +42,18 @@ function App() {
           occupation={formInput.occupation}
         />
         <main className="main">
-          <Aside 
-
+          <Aside
+            position={formInput.position}
+            company={formInput.company}
+            city={formInput.city}
+            from={formInput.startDate}
+            to={formInput.endDate}
           />
 
-          <PersonalInfo 
-            address={formInput.address} 
-            phone={formInput.phoneNumber} 
-            email={formInput.email} 
+          <PersonalInfo
+            address={formInput.address}
+            phone={formInput.phoneNumber}
+            email={formInput.email}
           />
         </main>
       </section>

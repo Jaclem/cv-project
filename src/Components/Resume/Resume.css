@@ -21,9 +21,14 @@
 
 .aside {
   margin-right: auto;
+  width: 40%;
 }
 
 .personal--resume {
   text-align: left;
   width: 30%;
+}
+.aside--date-flex {
+  display: flex;
+  gap: 20px;
 }

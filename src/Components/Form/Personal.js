@@ -1,4 +1,5 @@
 import "./Form.css";
+import Employment from "./Employment";
 
 function Personal(props) {
   return (
@@ -51,14 +52,7 @@ function Personal(props) {
         onChange={props.handleChange}
       />
 
-      <h1 className="personal--title">Personal Information</h1>
-      <label htmlFor="position">Position</label>
-      <input
-        type="text"
-        name="position"
-        value={props.input.phoneNumber}
-        onChange={props.handleChange}
-      />
+      <Employment {...props} />
     </div>
   );
 }
