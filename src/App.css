@@ -11,24 +11,26 @@ body {
 }
 
 .card {
-  background-color: #a9a9a9;
+  background-color: white;
   box-shadow: 0 0 8px 2px rgb(0 0 0 / 20%);
   border-radius: 5px;
-  width: 500px;
+  width: 100%;
   padding: 10px;
   margin: 30px auto;
+  flex: 1;
 }
 
 .resume-template {
   box-shadow: 0 0 8px 2px rgb(0 0 0 / 20%);
   border-radius: 5px;
-  padding: 0 80px;
-  width: 800px;
+  padding: 0 34px;
+  width: 100%;
   margin: 30px auto;
+  flex: 2;
 }
 
 .main {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 20px;
 }

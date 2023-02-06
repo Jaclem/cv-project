@@ -23,6 +23,7 @@
   margin-right: auto;
 }
 
-.personal {
-  width: 180px;
+.personal--resume {
+  text-align: left;
+  width: 30%;
 }

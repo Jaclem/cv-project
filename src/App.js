@@ -9,11 +9,10 @@ function App() {
   const [formInput, setFormInput] = useState({
     firstName: "",
     lastName: "",
-    title: "",
+    occupation: "",
     email: "",
     address: "",
     phoneNumber: "",
-    about: "",
   });
 
   function handleChange(e) {
@@ -35,11 +34,18 @@ function App() {
         <Header
           firstName={formInput.firstName}
           lastName={formInput.lastName}
-          title={formInput.title}
+          occupation={formInput.occupation}
         />
         <main className="main">
-          <Aside />
-          <PersonalInfo />
+          <Aside 
+
+          />
+
+          <PersonalInfo 
+            address={formInput.address} 
+            phone={formInput.phoneNumber} 
+            email={formInput.email} 
+          />
         </main>
       </section>
     </>

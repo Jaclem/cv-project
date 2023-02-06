@@ -1,4 +1,16 @@
-.personal-info {
+.personal {
   display: flex;
   flex-direction: column;
+}
+
+.personal--title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  height: 30px;
+  border: none;
+  padding-left: 10px;
+  background-color: rgba(227, 244, 250, 0.477);
 }

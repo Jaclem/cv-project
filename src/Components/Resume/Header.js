@@ -10,7 +10,7 @@ function Header(props) {
 
       <img src={images} className="header--image" />
 
-      <h4 className="header--title">{props.title}</h4>
+      <h4 className="header--occupation">{props.occupation}</h4>
     </header>
   );
 }

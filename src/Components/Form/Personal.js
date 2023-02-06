@@ -2,8 +2,8 @@ import "./Form.css";
 
 function Personal(props) {
   return (
-    <div className="personal-info">
-      <h1>Personal Information</h1>
+    <div className="personal">
+      <h1 className="personal--title">Personal Information</h1>
       <label htmlFor="firstName">First Name</label>
       <input
         type="text"
@@ -19,11 +19,11 @@ function Personal(props) {
         onChange={props.handleChange}
       />
 
-      <label htmlFor="title">Title</label>
+      <label htmlFor="title">Occupation</label>
       <input
         type="text"
-        name="title"
-        value={props.input.title}
+        name="occupation"
+        value={props.input.occupation}
         onChange={props.handleChange}
       />
 
@@ -48,13 +48,6 @@ function Personal(props) {
         type="number"
         name="phoneNumber"
         value={props.input.phoneNumber}
-        onChange={props.handleChange}
-      />
-
-      <label htmlFor="about">About</label>
-      <textarea
-        name="about"
-        value={props.input.about}
         onChange={props.handleChange}
       />
     </div>
