@@ -14,3 +14,15 @@ input {
   padding-left: 10px;
   background-color: rgba(227, 244, 250, 0.477);
 }
+
+.personal--delete, .personal--add {
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 5px;
+  border: none;
+  background-color: #474747;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
