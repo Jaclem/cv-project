@@ -4,8 +4,11 @@ import Header from "./Components/Resume/Header";
 import Aside from "./Components/Resume/Aside";
 import PersonalInfo from "./Components/Resume/PersonalInfo";
 import { useState } from "react";
+import Employment from "./Components/Form/Employment";
 
 function App() {
+  const [deleteBtn, setDeleteBtn] = useState(false);
+  const [addBtn, setAddBtn] = useState(false);
   const [formInput, setFormInput] = useState({
     firstName: "",
     lastName: "",
@@ -29,10 +32,26 @@ function App() {
     });
   }
 
+  function handleDelete() {
+    setDeleteBtn((prevBtn) => !prevBtn);
+  }
+
+  function handleAdd() {
+    setAddBtn((prevAddBtn) => !prevAddBtn);
+    setDeleteBtn(false);
+  }
+
   return (
     <>
       <div className="card">
-        <Personal handleChange={handleChange} input={formInput} />
+        <Personal
+          handleChange={handleChange}
+          input={formInput}
+          delete={deleteBtn}
+          add={addBtn}
+          deleteBtn={() => handleDelete()}
+          handleAdd={() => handleAdd()}
+        />
       </div>
 
       <section className="resume-template">

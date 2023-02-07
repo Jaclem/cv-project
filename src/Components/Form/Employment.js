@@ -1,27 +1,9 @@
-import { useState } from "react";
-
 export default function Employment(props) {
-  const [deleteBtn, setDeleteBtn] = useState(false);
-  const [addBtn, setAddBtn] = useState(false);
-
-  function handleDelete() {
-    setDeleteBtn((prevBtn) => !prevBtn);
-  }
-
-  function handleAdd() {
-    setAddBtn((prevAddBtn) => !prevAddBtn);
-    setDeleteBtn((prevBtn) => {
-      if (!prevBtn) {
-        return !prevBtn;
-      }
-    });
-  }
-
   return (
     <>
-      {!deleteBtn && (
+      <h1 className="personal--title">Experience</h1>
+      {!props.delete && (
         <>
-          <h1 className="personal--title">Experience</h1>
           <label htmlFor="position">Position</label>
           <input
             type="text"
@@ -62,12 +44,12 @@ export default function Employment(props) {
             onChange={props.handleChange}
           />
 
-          <button className="personal--delete" onClick={handleDelete}>
+          <button className="personal--delete" onClick={props.deleteBtn}>
             Delete
           </button>
         </>
       )}
-      <button className="personal--add" onClick={handleAdd}>
+      <button className="personal--add" onClick={props.handleAdd}>
         Add
       </button>
     </>
