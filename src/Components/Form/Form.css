@@ -1,8 +1,3 @@
-.personal {
-  display: flex;
-  flex-direction: column;
-}
-
 .personal--title {
   font-size: 20px;
   margin: 20px 0;

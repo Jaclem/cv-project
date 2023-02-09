@@ -11,6 +11,8 @@ body {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   box-shadow: 0 0 8px 2px rgb(0 0 0 / 20%);
   border-radius: 5px;

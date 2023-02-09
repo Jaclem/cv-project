@@ -3,7 +3,7 @@ import Employment from "./Employment";
 
 function Personal(props) {
   return (
-    <div className="personal">
+    <>
       <h1 className="personal--title">Personal Information</h1>
       <label htmlFor="firstName">First Name</label>
       <input
@@ -51,9 +51,7 @@ function Personal(props) {
         value={props.input.phoneNumber}
         onChange={props.handleChange}
       />
-
-      <Employment {...props} />
-    </div>
+    </>
   );
 }
 
