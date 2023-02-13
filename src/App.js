@@ -11,7 +11,6 @@ import Add from "./Components/Buttons/Add";
 function App() {
   const [deleteBtn, setDeleteBtn] = useState(false);
   const [addBtn, setAddBtn] = useState(false);
-  const [employmentList, setEmploymentList] = useState([]);
 
   const [formInput, setFormInput] = useState({
     firstName: "",
@@ -20,12 +19,16 @@ function App() {
     email: "",
     address: "",
     phoneNumber: "",
+  });
+
+  const [employList, setEmployList] = useState([])
+  const obj =  {
     position: "",
     company: "",
     city: "",
     startDate: "",
     endDate: "",
-  });
+  }
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -37,6 +40,15 @@ function App() {
     });
   }
 
+  function handleEmployListChange(e, index) {
+    const {name, value} = e.target
+    setEmployList(prev => {
+      const found = prev[index]
+      found[name] = value
+      return [...prev]
+    })
+  }
+
   function handleDelete() {
     setDeleteBtn((prevBtn) => !prevBtn);
   }
@@ -44,21 +56,34 @@ function App() {
   function handleAdd() {
     setAddBtn((prevAddBtn) => !prevAddBtn);
     setDeleteBtn(false);
-    setEmploymentList((prevEmployment) => {
-      console.log(prevEmployment);
-      return [
-        ...prevEmployment,
-        <Employment handleChange={handleChange} input={formInput} />,
-      ];
-    });
+    setEmployList((prevEmployList) => {
+          return [...prevEmployList, {...obj}]
+    })
   }
+  const employment = employList.map((list, i) => {
+    return <Employment key={i} handleChange={(e) => handleEmployListChange(e,i)} input={list} />
+  });
+
+  const asideList = employList.map((list, i) => {
+    return (
+      <Aside
+        key={i}
+        index={i}
+        position={list.position}
+        company={list.company}
+        city={list.city}
+        from={list.startDate}
+        to={list.endDate}
+    />
+    )         
+  })
 
   return (
     <>
       <div className="card">
         <Personal handleChange={handleChange} input={formInput} />
-
-        {employmentList}
+   
+        {employment}
 
         <Delete deleteBtn={handleDelete} />
 
@@ -72,13 +97,7 @@ function App() {
           occupation={formInput.occupation}
         />
         <main className="main">
-          <Aside
-            position={formInput.position}
-            company={formInput.company}
-            city={formInput.city}
-            from={formInput.startDate}
-            to={formInput.endDate}
-          />
+          {asideList}
 
           <PersonalInfo
             address={formInput.address}
